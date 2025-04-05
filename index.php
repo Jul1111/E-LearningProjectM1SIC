@@ -14,11 +14,19 @@ error_reporting(E_ALL);
 // Start sesion if nto
 if(!isset($_SESSION)) { session_start(); }
 
-// Variable(s)
-$action = $_GET['action'] ?? 'home'; // Get action if valid else default
+// Remove ext
+$requestUri = $_SERVER['REQUEST_URI'];
+$scriptName = dirname($_SERVER['SCRIPT_NAME']);
+
+// Remove base path
+$path = str_replace($scriptName, '', $requestUri);
+$path = trim(parse_url($path, PHP_URL_PATH), '/');
+
+$action = $path ?: 'default';
 
 // Match actions
 match($action) {
+    'login' => LoginController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 
