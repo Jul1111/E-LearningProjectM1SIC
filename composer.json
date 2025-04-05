@@ -1,0 +1,17 @@
+{
+    "name": "benja/e-learning-project-m1sic",
+    "require": {
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Benja\\ELearningProjectM1sic\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Whiletruend",
+            "email": "whiletruend@gmail.com"
+        }
+    ]
+}
