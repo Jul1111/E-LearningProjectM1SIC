@@ -27,3 +27,8 @@ git push -u origin main
 ```bash
 git remote remove origin
 ```
+## 2. Pull la dernière version de la branche
+
+```bash
+git pull origin main
+```
