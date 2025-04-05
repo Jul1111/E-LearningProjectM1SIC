@@ -1,11 +1,11 @@
 {
-    "name": "benja/e-learning-project-m1sic",
+    "name": "jabl/elearning",
     "require": {
         "ext-pdo": "*"
     },
     "autoload": {
         "psr-4": {
-            "Benja\\ELearningProjectM1sic\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
