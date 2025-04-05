@@ -1,6 +1,15 @@
 ﻿# E-LearningProjectM1SIC
 
- git init
+# Commandes Git de Base
+
+Ce fichier contient les commandes essentielles pour se rappeler comment utiliser Git.
+
+---
+
+## 1. Initialiser le dépôt Git
+
+```bash
+git init
 
 git add [nom_du_fichier]
 
@@ -10,8 +19,11 @@ git branch -M [nom_de_la_branche]
 
 git remote add origin https://[TOKEN]@github.com/Jul1111/E-LearningProjectM1SIC.git
 
-#Pour supprimer le remot add
+git push -u origin main
+```
 
-git remote remove origin 
+## 2. Supprimer le remote Git
 
-git push -u origni main
+```bash
+git remote remove origin
+```
