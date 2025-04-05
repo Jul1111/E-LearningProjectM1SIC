@@ -6,7 +6,7 @@ Ce fichier contient les commandes essentielles pour se rappeler comment utiliser
 
 ---
 
-## 1. Initialiser le dépôt Git
+## Initialiser le dépôt Git
 
 ```bash
 git init
@@ -22,12 +22,12 @@ git remote add origin https://[TOKEN]@github.com/Jul1111/E-LearningProjectM1SIC.
 git push -u origin main
 ```
 
-## 2. Supprimer le remote Git
+## Supprimer le remote Git
 
 ```bash
 git remote remove origin
 ```
-## 2. Pull la dernière version de la branche
+## Pull la dernière version de la branche
 
 ```bash
 git pull origin main
