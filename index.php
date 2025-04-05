@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 // Require
-namespace App\controller;
+namespace App\controllers;
 require_once __DIR__ . '/vendor/autoload.php';
 
 // Show errors
