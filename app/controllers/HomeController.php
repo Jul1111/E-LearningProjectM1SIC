@@ -17,6 +17,13 @@ class HomeController {
     }
 
     public function render() {
-        echo "Bienvenue sur la page d'accueil !";
+        // Chemin vers la vue
+        $viewPath = __DIR__ . '/../views/home/home.php';
+
+        if (file_exists($viewPath)) {
+            require_once $viewPath;
+        } else {
+            echo "Vue introuvable : " . $viewPath;
+        }
     }
 }
