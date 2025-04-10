@@ -87,7 +87,9 @@
 </head>
 <body>
     <header>
-        <div class="logo">📘 Learn2Master</div>
+    <a href="Default" class="logo" style="font-size: 24px; font-weight: bold; color: #ff9900; text-decoration: none;">
+    📘 Learn2Master
+  </a>
         <nav>
             <a href="#">Accueil</a>
             <a href="#">Formations</a>

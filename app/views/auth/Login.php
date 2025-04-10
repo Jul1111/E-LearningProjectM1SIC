@@ -46,6 +46,12 @@
 </head>
 <body>
 
+<header style="background-color: #ffffff; padding: 20px 40px; display: flex; align-items: center; border-bottom: 1px solid #eee;">
+  <a href="Default" class="logo" style="font-size: 24px; font-weight: bold; color: #ff9900; text-decoration: none;">
+    📘 Learn2Master
+  </a>
+</header>
+
 <section class="vh-100" style="background-color: #f9f9f9;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -65,7 +71,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form method="post" action="/elearningm1/Login">
+                <form method="post" action="/Login">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-user-lock fa-2x me-3" style="color: #ff9900;"></i>
@@ -90,7 +96,7 @@
 
                   <div class="mb-3 d-flex justify-content-between">
                     <a class="small text-muted" href="#">Mot de passe oublié ?</a>
-                    <a class="small link-orange" href="/elearningm1/SignUp">Créer un compte</a>
+                    <a class="small link-orange" href="/SignUp">Créer un compte</a>
                   </div>
 
                   <div class="text-muted small">
