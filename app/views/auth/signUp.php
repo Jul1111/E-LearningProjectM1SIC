@@ -80,7 +80,7 @@
         <div class="logo-learn2master">📘 Learn2Master</div>
         <h2 class="fw-bold mb-4">Créer un compte</h2>
 
-        <form method="post" action="/SignUp">
+        <form method="post" action="/signUp">
           <div class="row">
             <div class="col-md-6 mb-4">
               <div class="form-outline">
@@ -129,7 +129,7 @@
             </button>
           </div>
 
-          <p class="mt-4">Déjà inscrit ? <a href="/Login" class="link-orange">Se connecter</a></p>
+          <p class="mt-4">Déjà inscrit ? <a href="/login" class="link-orange">Se connecter</a></p>
         </form>
       </div>
 

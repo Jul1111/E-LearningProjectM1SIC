@@ -18,7 +18,7 @@ class LoginController {
 
     public function render() {
          // Chemin vers la vue
-         $viewPath = __DIR__ . '/../views/auth/Login.php';
+         $viewPath = __DIR__ . '/../views/auth/login.php';
 
          if (file_exists($viewPath)) {
              require_once $viewPath;
