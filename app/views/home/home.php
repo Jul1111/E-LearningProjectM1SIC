@@ -96,7 +96,7 @@
             <a href="#">Contact</a>
         </nav>
         <div class="cta-buttons">
-            <a href="#" class="btn-signup">Créer un compte</a>
+            <a href="/SignUp" class="btn-signup">Créer un compte</a>
             <a href="#" class="btn-login">Se connecter</a>
         </div>
     </header>
