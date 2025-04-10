@@ -26,8 +26,8 @@ $action = $path ?: 'default';
 
 // Match actions
 match($action) {
-    'Login' => LoginController::getInstance()->render(),
-    'SignUp' => SignUpController::getInstance()->render(),
+    'login' => LoginController::getInstance()->render(),
+    'signUp' => SignUpController::getInstance()->render(),
     'formation' => FormationController::getInstance()->render(),
     'apropos'   => AproposController::getInstance()->render(),
     'tarifs'    => TarifsController::getInstance()->render(),

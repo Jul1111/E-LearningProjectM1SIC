@@ -19,7 +19,7 @@ class SignUpController {
     public function render() {
         {
             // Chemin vers la vue
-            $viewPath = __DIR__ . '/../views/auth/SignUp.php';
+            $viewPath = __DIR__ . '/../views/auth/signUp.php';
    
             if (file_exists($viewPath)) {
                 require_once $viewPath;

@@ -98,8 +98,8 @@
             <a href="/contact">Contact</a>
         </nav>
         <div class="cta-buttons">
-            <a href="/SignUp" class="btn-signup">Créer un compte</a>
-            <a href="/Login" class="btn-login">Se connecter</a>
+            <a href="/signUp" class="btn-signup">Créer un compte</a>
+            <a href="/login" class="btn-login">Se connecter</a>
         </div>
     </header>
 <!-- Premier visuel -->
@@ -107,7 +107,7 @@
         <h1><span class="highlight">Maîtrisez</span> votre avenir</h1>
         <p>Accédez à des fiches de révision claires, des quiz interactifs et des conseils pour réussir votre Master.</p>
         <div class="hero-buttons">
-            <a href="/Login" class="btn-primary">Commencer à réviser</a>
+            <a href="/login" class="btn-primary">Commencer à réviser</a>
             <a href="/formation" class="btn-secondary">Voir les cours</a>
         </div>
     </section>

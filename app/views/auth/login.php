@@ -71,7 +71,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form method="post" action="/Login">
+                <form method="post" action="/login">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-user-lock fa-2x me-3" style="color: #ff9900;"></i>
@@ -94,7 +94,7 @@
 
                   <div class="mb-3 d-flex justify-content-between">
                     <a class="small text-muted" href="#">Mot de passe oublié ?</a>
-                    <a class="small link-orange" href="/SignUp">Créer un compte</a>
+                    <a class="small link-orange" href="/signUp">Créer un compte</a>
                   </div>
 
                   <div class="text-muted small">
