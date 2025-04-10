@@ -1,7 +1,7 @@
 <?php
 namespace App\controllers;
 
-class LoginController {
+class SignUpController {
     # Variable(s)
     private static $_instance = NULL;
 
@@ -10,13 +10,22 @@ class LoginController {
 
     public static function getInstance() {
         if(is_null(self::$_instance)) {
-            self::$_instance = new LoginController();
+            self::$_instance = new SignUpController();
         }
 
         return self::$_instance;
     }
 
     public function render() {
-        echo "Bienvenue sur la page de login !";
+        {
+            // Chemin vers la vue
+            $viewPath = __DIR__ . '/../views/auth/SignUp.php';
+   
+            if (file_exists($viewPath)) {
+                require_once $viewPath;
+            } else {
+                echo "Vue introuvable : " . $viewPath;
+            }
+       }
     }
 }
