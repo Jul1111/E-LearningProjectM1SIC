@@ -17,6 +17,13 @@ class LoginController {
     }
 
     public function render() {
-        echo "Bienvenue sur la page de login !";
+         // Chemin vers la vue
+         $viewPath = __DIR__ . '/../views/auth/Login.php';
+
+         if (file_exists($viewPath)) {
+             require_once $viewPath;
+         } else {
+             echo "Vue introuvable : " . $viewPath;
+         }
     }
 }
