@@ -67,7 +67,7 @@
 </head>
 <body>
 <header style="background-color: #ffffff; padding: 20px 40px; display: flex; align-items: center; border-bottom: 1px solid #eee;">
-<a href="Default" class="logo" style="font-size: 24px; font-weight: bold; color: #ff9900; text-decoration: none;">
+<a href="/" class="logo" style="font-size: 24px; font-weight: bold; color: #ff9900; text-decoration: none;">
     📘 Learn2Master
   </a>
 </header>
