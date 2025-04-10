@@ -107,7 +107,7 @@
         <h1><span class="highlight">Maîtrisez</span> votre avenir</h1>
         <p>Accédez à des fiches de révision claires, des quiz interactifs et des conseils pour réussir votre Master.</p>
         <div class="hero-buttons">
-            <a href="/login" class="btn-primary">Commencer à réviser</a>
+            <a href="/Login" class="btn-primary">Commencer à réviser</a>
             <a href="/formation" class="btn-secondary">Voir les cours</a>
         </div>
     </section>
