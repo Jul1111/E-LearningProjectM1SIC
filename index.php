@@ -28,6 +28,10 @@ $action = $path ?: 'default';
 match($action) {
     'Login' => LoginController::getInstance()->render(),
     'SignUp' => SignUpController::getInstance()->render(),
+    'formation' => FormationController::getInstance()->render(),
+    'apropos'   => AproposController::getInstance()->render(),
+    'tarifs'    => TarifsController::getInstance()->render(),
+    'contact'   => ContactController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 

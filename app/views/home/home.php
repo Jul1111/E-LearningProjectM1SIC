@@ -91,11 +91,11 @@
     📘 Learn2Master
   </a>
         <nav>
-            <a href="#">Accueil</a>
-            <a href="#">Formations</a>
-            <a href="#">À propos</a>
-            <a href="#">Tarifs</a>
-            <a href="#">Contact</a>
+            <a href="/">Accueil</a>
+            <a href="/formation">Formations</a>
+            <a href="/apropos">À propos</a>
+            <a href="/tarifs">Tarifs</a>
+            <a href="/contact">Contact</a>
         </nav>
         <div class="cta-buttons">
             <a href="/SignUp" class="btn-signup">Créer un compte</a>
@@ -107,8 +107,8 @@
         <h1><span class="highlight">Maîtrisez</span> votre avenir</h1>
         <p>Accédez à des fiches de révision claires, des quiz interactifs et des conseils pour réussir votre Master.</p>
         <div class="hero-buttons">
-            <a href="#" class="btn-primary">Commencer à réviser</a>
-            <a href="#" class="btn-secondary">Voir les cours</a>
+            <a href="/login" class="btn-primary">Commencer à réviser</a>
+            <a href="/formation" class="btn-secondary">Voir les cours</a>
         </div>
     </section>
 
@@ -146,7 +146,7 @@
 
         
         <div style="display: flex; justify-content: flex-end; margin-bottom: 30px;">
-            <a href="/tarifs" style="
+            <a href="/formation" style="
                 background-color: #ff9900;
                 color: white;
                 font-weight: bold;
@@ -173,11 +173,11 @@
                     <p style="color: #555;">Organisez vos révisions à votre rythme, selon vos contraintes personnelles ou pro.</p>
                 </div>
                 <div style="display: flex; justify-content: flex-end;">
-                    <div style="background-color: #f7f7f7; padding: 10px; border-radius: 10px; cursor: pointer;">
+                    <a href="/formation" style="background-color: #f7f7f7; padding: 10px; border-radius: 10px; cursor: pointer;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -189,11 +189,11 @@
                     <p style="color: #555;">Bénéficiez de contenus rédigés avec précision par des étudiants avancés et des enseignants.</p>
                 </div>
                 <div style="display: flex; justify-content: flex-end;">
-                    <div style="background-color: #f7f7f7; padding: 10px; border-radius: 10px; cursor: pointer;">
+                    <a href="/formation" style="background-color: #f7f7f7; padding: 10px; border-radius: 10px; cursor: pointer;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -205,11 +205,11 @@
                     <p style="color: #555;">Testez vos connaissances avec des quiz pratiques et des feedbacks instantanés.</p>
                 </div>
                 <div style="display: flex; justify-content: flex-end;">
-                    <div style="background-color: #f7f7f7; padding: 10px; border-radius: 10px; cursor: pointer;">
+                    <a href="/formation" style="background-color: #f7f7f7; padding: 10px; border-radius: 10px; cursor: pointer;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
             </div>
 

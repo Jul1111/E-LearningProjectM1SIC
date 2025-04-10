@@ -81,13 +81,11 @@
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Accédez à votre espace</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="email" name="email" class="form-control form-control-lg" required />
-                    <label class="form-label" for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" class="form-control form-control-lg" required />
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="password" name="password" class="form-control form-control-lg" required />
-                    <label class="form-label" for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" class="form-control form-control-lg" required />
                   </div>
 
                   <div class="pt-1 mb-4">

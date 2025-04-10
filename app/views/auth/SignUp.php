@@ -84,30 +84,26 @@
           <div class="row">
             <div class="col-md-6 mb-4">
               <div class="form-outline">
-                <input type="text" id="prenom" name="prenom" class="form-control" required />
-                <label class="form-label" for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" class="form-control" required />
               </div>
             </div>
             <div class="col-md-6 mb-4">
               <div class="form-outline">
-                <input type="text" id="nom" name="nom" class="form-control" required />
-                <label class="form-label" for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom" class="form-control" required />               
               </div>
             </div>
           </div>
 
           <div class="form-outline mb-4">
-            <input type="email" id="email" name="email" class="form-control" required />
-            <label class="form-label" for="email">Adresse email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" class="form-control" required />
           </div>
 
           <div class="form-outline mb-4">
-            <input type="password" id="password" name="password" class="form-control" required />
-            <label class="form-label" for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" class="form-control" required />
           </div>
 
           <div class="form-check d-flex justify-content-start mb-4">
-            <input class="form-check-input me-2" type="checkbox" value="" id="newsletter" checked />
+            <input class="form-check-input me-2" type="checkbox" value="" id="newsletter"/>
             <label class="form-check-label" for="newsletter">
               Je souhaite recevoir la newsletter
             </label>
