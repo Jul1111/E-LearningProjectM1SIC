@@ -4,14 +4,14 @@
 
     class User {
         # Variables
-        private string $id;
+        private int $id;
         private string $username;
         private string $email;
         private string $password_hash;
         private string $created_at;
 
         # Constructor
-        public function __constructor(string $id, string $username, string $email, string $password_hash, string $created_at) {
+        public function __constructor(int $id, string $username, string $email, string $password_hash, string $created_at) {
             $this->id = $id;
             $this->username = $username;
             $this->email = $email;
@@ -19,8 +19,8 @@
             $this->created_at = $created_at;
         }
 
-        # Functions
-        public function getID() : string { return $this->id; }
+        # Methods
+        public function getID() : int { return $this->id; }
         public function getUsername() : string { return $this->username; }
         public function getEmail() : string { return $this->email; }
         public function getPasswordHash() : string { return $this->password_hash; }
