@@ -1,6 +1,7 @@
 <?php
 
 namespace App\models;
+use PDO;
 
 class CoursesAccess extends Database {
     # Récupérer tous les cours
