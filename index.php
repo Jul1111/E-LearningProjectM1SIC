@@ -26,6 +26,7 @@ $action = $path ?: 'default';
 
 // Match actions
 match($action) {
+    'dev' => DevEnvController::getInstance()->render(),
     'login' => LoginController::getInstance()->render(),
     'signup' => SignUpController::getInstance()->render(),
     'formation' => FormationController::getInstance()->render(),
