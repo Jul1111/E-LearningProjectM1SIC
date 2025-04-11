@@ -97,10 +97,10 @@
 
     <div class="rightbar">
       <h2>Navigation</h2>
-      <a href="#">Accueil</a>
-      <a href="#">Formations</a>
-      <a href="#">Contact</a>
-      <a href="#">FAQ</a>
+      <a href="/">Accueil</a>
+      <a href="/formation">Formations</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact">FAQ</a>
     </div>
 
   </div>
