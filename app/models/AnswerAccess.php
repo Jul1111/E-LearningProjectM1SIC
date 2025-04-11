@@ -1,6 +1,7 @@
 <?php
 
 namespace App\models;
+use PDO;
 
 class AnswerAccess extends Database {
     # Récupérer toutes les réponses

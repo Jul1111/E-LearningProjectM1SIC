@@ -1,6 +1,7 @@
 <?php
 
 namespace App\models;
+use PDO;
 
 class QuizAccess extends Database {
     # Récupérer tous les quiz

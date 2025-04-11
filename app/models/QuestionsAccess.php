@@ -1,6 +1,7 @@
 <?php
 
 namespace App\models;
+use PDO;
 
 class QuestionAccess extends Database {
     # Récupérer toutes les questions

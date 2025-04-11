@@ -1,6 +1,7 @@
 <?php
 
 namespace App\models;
+use PDO;
 
 class ChapterAccess extends Database {
     # Récupérer tous les chapitres
