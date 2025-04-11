@@ -75,7 +75,7 @@
 
     <div class="sidebar">
       <h2>Menu</h2>
-      <a href="#"><i class="fas fa-user"></i> Profil</a>
+      <a href="/profil"><i class="fas fa-user"></i> Profil</a>
       <a href="#"><i class="fas fa-book"></i> Cours</a>
       <a href="#"><i class="fas fa-question-circle"></i> Quiz</a>
       <a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>

@@ -33,6 +33,7 @@ match($action) {
     'tarifs'    => TarifsController::getInstance()->render(),
     'contact'   => ContactController::getInstance()->render(),
     'dashboard' => DashboardController::getInstance()->render(),
+    'profil' => ProfilController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 
