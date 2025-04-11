@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9900;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+.cta-buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-login {
+    background-color: #ff9900;
+    color: white;
+    margin-left: 10px;
+}
+.btn-signup {
+    border: 2px solid #ff9900;
+    color: #ff9900;
+}
+.hero {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #fff;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #ff9900;
+}
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+.hero-buttons a {
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.btn-primary {
+    background-color: #ff9900;
+    color: white;
+}
+.btn-secondary {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ccc;
+}
+.section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fafafa;
+}
+a.cta-orange:hover {
+    background-color: #e08600;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.cta-buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: #ff9900;
+    color: white;
+    margin-left: 10px;
+}
+
+.btn-signup {
+    border: 2px solid #ff9900;
+    color: #ff9900;
+}

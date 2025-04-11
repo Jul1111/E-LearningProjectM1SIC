@@ -17,13 +17,16 @@ class HomeController {
     }
 
     public function render() {
-        // Chemin vers la vue
-        $viewPath = __DIR__ . '/../views/home/home.php';
+        $pageName = 'home'; // Only var to change
 
-        if (file_exists($viewPath)) {
-            require_once $viewPath;
-        } else {
-            echo "Vue introuvable : " . $viewPath;
-        }
+        // Setup views paths
+        $headerPath = __DIR__ . '/../views/header.php'; // Chemin vers l'en-tête
+        $mainView = __DIR__ . '/../views/' . $pageName . '/' . $pageName . '.php'; // Chemin vers la vue
+        $footerPath = __DIR__ . '/../views/footer.php'; // Chemin vers le pied de page
+
+        // Include views
+        require_once $headerPath;
+        require_once $mainView;
+        require_once $footerPath;
     }
 }

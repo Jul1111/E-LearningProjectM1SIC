@@ -14,6 +14,16 @@ class ContactController {
     }
 
     public function render() {
-        require_once __DIR__ . '/../views/contact/contact.php';
+        $pageName = 'contact'; // Only var to change
+
+        // Setup views paths
+        $headerPath = __DIR__ . '/../views/header.php'; // Chemin vers l'en-tête
+        $mainView = __DIR__ . '/../views/' . $pageName . '/' . $pageName . '.php'; // Chemin vers la vue
+        $footerPath = __DIR__ . '/../views/footer.php'; // Chemin vers le pied de page
+
+        // Include views
+        require_once $headerPath;
+        require_once $mainView;
+        require_once $footerPath;
     }
 }
