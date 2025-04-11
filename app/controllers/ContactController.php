@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use App\models\UserAccess;
 
 class ContactController {
     private static $_instance = NULL;
@@ -19,6 +20,12 @@ class ContactController {
         // Setup views paths
         $headerPath = __DIR__ . '/../views/header.php'; // Chemin vers l'en-tête
         $mainView = __DIR__ . '/../views/' . $pageName . '/' . $pageName . '.php'; // Chemin vers la vue
+
+        $users = UserAccess::getAll(); // Récupération des utilisateurs
+        $userCount = count($users); // Nombre d'utilisateurs
+        echo $userCount; // Affichage du nombre d'utilisateurs
+        
+
         $footerPath = __DIR__ . '/../views/footer.php'; // Chemin vers le pied de page
 
         // Include views
