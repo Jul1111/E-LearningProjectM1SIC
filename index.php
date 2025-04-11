@@ -32,6 +32,7 @@ match($action) {
     'apropos'   => AproposController::getInstance()->render(),
     'tarifs'    => TarifsController::getInstance()->render(),
     'contact'   => ContactController::getInstance()->render(),
+    'dashboard' => DashboardController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 
