@@ -19,7 +19,7 @@
             <a href="/contact">Contact</a>
         </nav>
         <div class="cta-buttons">
-            <a href="/signUp" class="btn-signup">Créer un compte</a>
+            <a href="/signup" class="btn-signup">Créer un compte</a>
             <a href="/login" class="btn-login">Se connecter</a>
         </div>
     </header>
