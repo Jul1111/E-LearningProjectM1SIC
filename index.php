@@ -21,14 +21,14 @@ $scriptName = dirname($_SERVER['SCRIPT_NAME']);
 // Remove base path
 $path = str_replace($scriptName, '', $requestUri);
 $path = trim(parse_url($path, PHP_URL_PATH), '/');
-var_dump($_SESSION);
+
 $action = $path ?: 'default';
 // Match actions
 match($action) {
     'dev' => DevEnvController::getInstance()->render(),
     'login' => LoginController::getInstance()->render(),
     'logout' => LogoutController::getInstance()->logout(),
-    'signup' => SignUpController::getInstance()->render(),
+    'signUp' => SignUpController::getInstance()->render(),
     'formation' => FormationController::getInstance()->render(),
     'apropos'   => AproposController::getInstance()->render(),
     'tarifs'    => TarifsController::getInstance()->render(),
