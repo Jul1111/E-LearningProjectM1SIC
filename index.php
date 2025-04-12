@@ -21,7 +21,7 @@ $scriptName = dirname($_SERVER['SCRIPT_NAME']);
 // Remove base path
 $path = str_replace($scriptName, '', $requestUri);
 $path = trim(parse_url($path, PHP_URL_PATH), '/');
-
+var_dump($_SESSION);
 $action = $path ?: 'default';
 // Match actions
 match($action) {
