@@ -94,7 +94,7 @@
 
                   <div class="mb-3 d-flex justify-content-between">
                     <a class="small text-muted" href="#">Mot de passe oublié ?</a>
-                    <a class="small link-orange" href="/signUp">Créer un compte</a>
+                    <a class="small link-orange" href="/signup">Créer un compte</a>
                   </div>
 
                   <div class="text-muted small">
