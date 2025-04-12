@@ -19,8 +19,7 @@
             <a href="/contact">Contact</a>
         </nav>
         <div class="cta-buttons">
-            <a href="/signup" class="btn-signup">Créer un compte</a>
-            <a href="/login" class="btn-login">Se connecter</a>
+            <a href="/logout" class="btn-signup">Déconnexion</a>
             
         </div>
     </header>

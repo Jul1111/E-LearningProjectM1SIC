@@ -16,4 +16,21 @@ class UserAccess extends Database {
 
         return $table;
     }
+    public static function getById($id)  {
+        $query = self::query('SELECT * FROM users WHERE id = :id', [':id' => $id]);
+        $rows = $query->fetch(PDO::FETCH_ASSOC);
+
+        return new User($rows['id'], $rows['username'], $rows['email'], $rows['password_hash'], $rows['created_at']);
+    }
+    public static function getByEmail($email)  {
+        
+        $user = Database::fetchOne("SELECT * FROM users WHERE email = :email", [
+            'email' => $email
+        ]);
+        if ($user) {
+            return new User($user['id'], $user['username'], $user['email'], $user['password_hash'], $user['created_at']);
+        } else {
+            return null;
+        }        
+    }
 }

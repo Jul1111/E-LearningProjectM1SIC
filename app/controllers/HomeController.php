@@ -20,7 +20,13 @@ class HomeController {
         $pageName = 'home'; // Only var to change
 
         // Setup views paths
-        $headerPath = __DIR__ . '/../views/header.php'; // Chemin vers l'en-tête
+        if($_SESSION) {
+            $headerPath = __DIR__ . '/../views/headerConnected.php'; // Chemin vers l'en-tête
+        } else {
+            $headerPath = __DIR__ . '/../views/header.php'; // Chemin vers l'en-tête
+        }
+       
+
         $mainView = __DIR__ . '/../views/' . $pageName . '/' . $pageName . '.php'; // Chemin vers la vue
         $footerPath = __DIR__ . '/../views/footer.php'; // Chemin vers le pied de page
 

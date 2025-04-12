@@ -11,7 +11,7 @@ class User {
     private string $created_at;
 
     # Constructor
-    public function __constructor(int $id, string $username, string $email, string $password_hash, string $created_at) {
+    public function __construct(int $id, string $username, string $email, string $password_hash, string $created_at) {
         $this->id = $id;
         $this->username = $username;
         $this->email = $email;
