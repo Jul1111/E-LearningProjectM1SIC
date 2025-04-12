@@ -57,6 +57,11 @@ class UserAccess extends Database {
             'email' => $email,
             'password_hash' => $password
         ]);
+        if ($query) {
+            $userId = Database::lastInsertId();
+            // Set the default role for the new user
+            UserRolesAccess::setUserRole($userId, 1); // Assuming 1 is the default role ID
+        }
         return $query;
     }
 

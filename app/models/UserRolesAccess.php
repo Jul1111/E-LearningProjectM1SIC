@@ -15,4 +15,12 @@ class UserRolesAccess extends Database {
 
         return $table;
     }
+
+    public static function setUserRole(int $userId, int $roleId = 1)  {
+        $query = Database::execute('INSERT INTO user_roles (user_id, role_id) VALUES (:user_id, :role_id)', [
+            ':user_id' => $userId,
+            ':role_id' => $roleId
+        ]);
+        return $query;
+    }
 }
