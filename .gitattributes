@@ -3,5 +3,5 @@
 *.sql linguist-vendored=false
 *.css linguist-vendored=false
 
-# potentiellement inutile
-*.hack linguist-detectable=false 
+# detecter le php comme étant juste du php et pas autre chose
+*.php linguist-language=PHP
