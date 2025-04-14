@@ -43,18 +43,7 @@
 
         
         <div style="display: flex; justify-content: flex-end; margin-bottom: 30px;">
-            <a href="/formation" style="
-                background-color: #ff9900;
-                color: white;
-                font-weight: bold;
-                font-family: 'Segoe UI', sans-serif;
-                padding: 10px 18px;
-                border: none;
-                border-radius: 8px;
-                text-decoration: none;
-                font-size: 14px;
-                transition: background-color 0.2s ease;
-            ">
+            <a href="/formation" class='btn-third'>
                 Tout voir
             </a>
         </div>

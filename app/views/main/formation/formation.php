@@ -16,7 +16,7 @@
         <p style="color: #555;">Développez vos compétences en leadership, communication et gestion d’équipe.</p>
       </div>
       <div style="padding: 0 24px 24px;">
-        <a href="#" style="background-color: #ff9900; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Voir la formation</a>
+        <a href="#" class="btn-third">Voir la formation</a>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
         <p style="color: #555;">Maîtrisez les outils, méthodes et soft skills pour piloter efficacement vos projets.</p>
       </div>
       <div style="padding: 0 24px 24px;">
-        <a href="#" style="background-color: #ff9900; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Voir la formation</a>
+        <a href="#" class="btn-third">Voir la formation</a>
       </div>
     </div>
 
@@ -40,7 +40,7 @@
         <p style="color: #555;">Comprenez les grands choix stratégiques des entreprises et les outils d’analyse (SWOT, PESTEL...)</p>
       </div>
       <div style="padding: 0 24px 24px;">
-        <a href="#" style="background-color: #ff9900; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Voir la formation</a>
+        <a href="#" class="btn-third">Voir la formation</a>
       </div>
     </div>
 
@@ -52,7 +52,7 @@
       <p style="color: #555;">Maîtrisez les étapes clés de la planification stratégique et les outils de contrôle de gestion pour piloter efficacement les performances de l’entreprise.</p>
       </div>
       <div style="padding: 0 24px 24px;">
-        <a href="#" style="background-color: #ff9900; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Voir la formation</a>
+        <a href="#" class="btn-third">Voir la formation</a>
       </div>
     </div>
 
@@ -64,7 +64,7 @@
         <p style="color: #555;">Apprenez à interpréter les données quantitatives et qualitatives pour appuyer les décisions managériales à l’aide d’outils comme Excel, Power BI ou des statistiques de base.</p>
       </div>
       <div style="padding: 0 24px 24px;">
-        <a href="#" style="background-color: #ff9900; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Voir la formation</a>
+        <a href="#" class="btn-third">Voir la formation</a>
       </div>
     </div>
 
@@ -76,7 +76,7 @@
         <p style="color: #555;">Maîtrisez les méthodes d’enquête (questionnaire, entretien, observation) pour collecter et analyser les informations utiles à la prise de décision en entreprise.</p>
       </div>
       <div style="padding: 0 24px 24px;">
-        <a href="#" style="background-color: #ff9900; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">Voir la formation</a>
+        <a href="#" class="btn-third">Voir la formation</a>
       </div>
     </div>
 

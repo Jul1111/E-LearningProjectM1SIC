@@ -9,8 +9,8 @@
 
   <!-- Toggle switch -->
   <div style="text-align: center; margin-bottom: 40px;">
-    <button id="monthlyBtn" onclick="togglePricing('monthly')" style="padding: 10px 20px; margin-right: 10px; background-color: #ff9900; color: white; border: none; border-radius: 6px;">Mensuel</button>
-    <button id="yearlyBtn" onclick="togglePricing('yearly')" style="padding: 10px 20px; background-color: white; color: #ff9900; border: 2px solid #ff9900; border-radius: 6px;">Annuel</button>
+    <button id="monthlyBtn" onclick="togglePricing('monthly')" style="cursor: pointer; padding: 10px 20px; margin-right: 10px; background-color: #ff9900; color: white; border: none; border-radius: 6px;">Mensuel</button>
+    <button id="yearlyBtn" onclick="togglePricing('yearly')" style="cursor: pointer; padding: 10px 20px; background-color: white; color: #ff9900; border: 2px solid #ff9900; border-radius: 6px;">Annuel</button>
   </div>
 
   <!-- Cartes tarifs -->

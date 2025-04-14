@@ -20,7 +20,7 @@ class TarifsController {
         // Setup views paths
         $headerPath = __DIR__ . '/../views/header.php'; // Chemin vers l'en-tête
         $mainView = __DIR__ . '/../views/' . $rootFolder . '/' . $pageName . '/' . $pageName . '.php'; // Chemin vers la vue
-        $faqPath    = __DIR__ . '/../views/faq.php';
+        $faqPath    = __DIR__ . '/../views/' . $rootFolder . '/faq.php';
         $footerPath = __DIR__ . '/../views/footer.php'; // Chemin vers le pied de page
 
         // Include views
