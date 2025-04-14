@@ -5,6 +5,7 @@
     <title>Accueil - E-Learning</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="icon" href="../../resources/img/favicon.png" type="image/png">
     <!-- Font Awesome pour les icônes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <header>
