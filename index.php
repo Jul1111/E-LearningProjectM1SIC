@@ -28,7 +28,7 @@ match($action) {
     'dev' => DevEnvController::getInstance()->render(),
     'login' => LoginController::getInstance()->render(),
     'logout' => LogoutController::getInstance()->logout(),
-    'signUp' => SignUpController::getInstance()->render(),
+    'signup' => SignUpController::getInstance()->render(),
     'formation' => FormationController::getInstance()->render(),
     'apropos'   => AproposController::getInstance()->render(),
     'tarifs'    => TarifsController::getInstance()->render(),

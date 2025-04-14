@@ -22,9 +22,9 @@ class SignUpController {
     public function render() {
         {
             // Chemin vers la vue
-            $viewPath = __DIR__ . '/../views/auth/signUp.php';
+            $viewPath = __DIR__ . '/../views/auth/signup.php';
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $this->signUp();
+                $this->signup();
                 return;
             }
             if (file_exists($viewPath)) {
@@ -35,7 +35,7 @@ class SignUpController {
        }
     }
 
-    public function signUp() {
+    public function signup() {
         // Récupérer les données du formulaire
         $username = $_POST['username'];
         $email = $_POST['email'];
@@ -45,7 +45,7 @@ class SignUpController {
         $existingUser = UserAccess::getByEmail($email);
         if ($existingUser) {
             // L'utilisateur existe déjà
-            header("Location: /signUp");
+            header("Location: /signup");
             return;
         }
 
