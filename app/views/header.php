@@ -24,7 +24,7 @@
                 <a href="/logout" class="btn-signup">Déconnexion</a>
                 <a href="/dashboard" class="btn-login">Tableau de bord</a>
             <?php else: ?>
-            <a href="/signUp" class="btn-signup">Créer un compte</a>
+            <a href="/signup" class="btn-signup">Créer un compte</a>
             <a href="/login" class="btn-login">Se connecter</a>
             <?php endif; ?>
         </div>
