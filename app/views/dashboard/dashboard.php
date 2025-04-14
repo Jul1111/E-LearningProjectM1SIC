@@ -79,6 +79,12 @@
       <a href="#"><i class="fas fa-book"></i> Cours</a>
       <a href="#"><i class="fas fa-question-circle"></i> Quiz</a>
       <a href="/logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+      <hr style="margin: 40px 0; border: 0.5px solid #eee;">
+      <h2>Navigation</h2>
+      <a href="/">Accueil</a>
+      <a href="/formation">Formations</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact">FAQ</a>
     </div>
 
     <div class="main">
@@ -94,15 +100,6 @@
         <div class="course-item">Aucun cours complété pour le moment.</div>
       </div>
     </div>
-
-    <div class="rightbar">
-      <h2>Navigation</h2>
-      <a href="/">Accueil</a>
-      <a href="/formation">Formations</a>
-      <a href="/contact">Contact</a>
-      <a href="/contact">FAQ</a>
-    </div>
-
   </div>
 </body>
 </html>
