@@ -21,11 +21,11 @@
         </nav>
         <div class="cta-buttons">
             <?php if (isset($_SESSION["is_logged_in"]) ): ?>
-                <a href="/logout" class="btn-signup">Déconnexion</a>
                 <a href="/dashboard" class="btn-login">Tableau de bord</a>
+                <a href="/logout" class="btn-signup"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></a>
             <?php else: ?>
-            <a href="/signup" class="btn-signup">Créer un compte</a>
-            <a href="/login" class="btn-login">Se connecter</a>
+                <a href="/signup" class="btn-signup">Créer un compte</a>
+                <a href="/login" class="btn-login">Se connecter</a>
             <?php endif; ?>
         </div>
     </header>
