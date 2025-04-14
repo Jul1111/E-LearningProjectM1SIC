@@ -59,7 +59,7 @@ class LoginController {
         $_SESSION['user_id'] = $user->getId();
         $_SESSION['username'] = $user->getUsername();
         $_SESSION['email'] = $user->getEmail();
-        $_SESSION['role'] = RolesAccess::getRoleByID($user->getRole()->getRoleId())->getName();
+        $_SESSION['role'] = RolesAccess::getRoleByID($user->getRole()->getRoleId())->getName(); // À opti pcq c'est nul
         $_SESSION['created_at'] = $user->getCreatedAt();
         $_SESSION['is_logged_in'] = true;
         // Rediriger vers la page d'accueil ou tableau de bord
