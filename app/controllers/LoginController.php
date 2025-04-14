@@ -63,7 +63,7 @@ class LoginController {
         $_SESSION['created_at'] = $user->getCreatedAt();
         $_SESSION['is_logged_in'] = true;
         // Rediriger vers la page d'accueil ou tableau de bord
-        header("Location: /");
+        header("Location: /dashboard");
         exit();
      
         echo "Connexion réussie !";
