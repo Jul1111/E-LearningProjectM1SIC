@@ -17,6 +17,7 @@ class LogoutController
 
         return self::$_instance;
     }
+    
     public function logout()
     {
         // Start the session if not already started

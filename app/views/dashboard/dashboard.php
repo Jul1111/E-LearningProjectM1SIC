@@ -78,7 +78,7 @@
       <a href="/profil"><i class="fas fa-user"></i> Profil</a>
       <a href="#"><i class="fas fa-book"></i> Cours</a>
       <a href="#"><i class="fas fa-question-circle"></i> Quiz</a>
-      <a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+      <a href="/logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
     </div>
 
     <div class="main">
