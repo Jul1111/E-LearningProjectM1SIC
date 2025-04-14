@@ -15,4 +15,16 @@ class RolesAccess extends Database {
 
         return $table;
     }
+
+    public static function getRoleByID(int $roleId) : ?Roles {
+        $query = self::fetchOne('SELECT * FROM roles WHERE id = :id', [
+            ':id' => $roleId
+        ]);
+
+        if ($query) {
+            return new Roles($query['id'], $query['name']);
+        }
+
+        return null;
+    }
 }

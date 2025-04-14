@@ -25,4 +25,5 @@ class User {
     public function getEmail() : string { return $this->email; }
     public function getPasswordHash() : string { return $this->password_hash; }
     public function getCreatedAt() : string { return $this->created_at; }
+    public function getRole() : ?UserRoles { return UserRolesAccess::getByUserID($this->id); }
 }
