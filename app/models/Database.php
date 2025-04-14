@@ -66,6 +66,7 @@ class Database {
     public static function rawQuery(string $sql): false|\PDOStatement {
         return self::connect()->query($sql);
     }
+    
     /**
      * Retourne l'ID de la dernière insertion
      */

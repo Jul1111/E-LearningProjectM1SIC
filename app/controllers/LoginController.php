@@ -2,6 +2,7 @@
 namespace App\controllers;
 use App\models\UserAccess;
 use App\models\User;
+use App\models\RolesAccess;
 
 class LoginController {
     # Variable(s)
@@ -49,11 +50,16 @@ class LoginController {
             header("Location: /login");
             return;
         }
+
+        // Remove session if exists
+        if (session_status() === PHP_SESSION_ACTIVE) { session_destroy(); }
+
         // Authentifier l'utilisateur
         session_start();
         $_SESSION['user_id'] = $user->getId();
         $_SESSION['username'] = $user->getUsername();
         $_SESSION['email'] = $user->getEmail();
+        $_SESSION['role'] = RolesAccess::getRoleByID($user->getRole()->getRoleId())->getName();
         $_SESSION['created_at'] = $user->getCreatedAt();
         $_SESSION['is_logged_in'] = true;
         // Rediriger vers la page d'accueil ou tableau de bord

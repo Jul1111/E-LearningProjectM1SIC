@@ -85,8 +85,8 @@
       <div class="top-bar">
         <h1>Tableau de bord</h1>
         <div class="profile">
-          <img src="https://via.placeholder.com/40" alt="Profil">
-          <span>Nom de l'utilisateur</span>
+          <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" alt="Profil">
+          <span><?= $_SESSION['username'] ?></span>
         </div>
       </div>
       <div class="courses">
