@@ -35,6 +35,8 @@ match($action) {
     'contact'   => ContactController::getInstance()->render(),
     'dashboard' => DashboardController::getInstance()->render(),
     'profil' => ProfilController::getInstance()->render(),
+    'courses' => CoursesController::getInstance()->render(),
+    'quiz' => QuizController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 

@@ -18,8 +18,8 @@
           <span class="arrow"></span>
         </div>
         <div class="dropdown-content">
-          <a href="#"><i class="fas fa-exclamation-circle"></i> Mes cours</a>
-          <a href="#"><i class="fas fa-question-circle"></i> Quiz</a>
+          <a href="/courses"><i class="fas fa-exclamation-circle"></i> Mes cours</a>
+          <a href="/quiz"><i class="fas fa-question-circle"></i> Quiz</a>
           </div>
       </div>
 
