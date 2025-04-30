@@ -5,19 +5,21 @@ use PDO;
 
 class CoursesAccess extends Database {
     # Récupérer tous les cours
-    public static function getAll(): array {
-        $query = self::query('SELECT * FROM courses');
+    public static function getAll() {
+        
+        $rows = Database::fetchAll("SELECT * FROM courses");
+        if (empty($rows)) {
+            return [];
+        }
         $courses = [];
-
-        foreach ($query as $row) {
-            $courses[$row['id']] = new Courses(
+        foreach ($rows as $row) {
+            $courses[] = new Courses(
                 (int)$row['id'],
                 $row['title'],
                 $row['description'],
                 $row['created_at']
             );
         }
-
         return $courses;
     }
 

@@ -34,4 +34,3 @@ class ProfilController {
         require_once $footerPath; 
     }
 }
- 

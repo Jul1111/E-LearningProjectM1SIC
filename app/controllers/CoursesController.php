@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use App\models\CoursesAccess;
 
 class CoursesController {
     private static $_instance = NULL;
@@ -11,6 +12,20 @@ class CoursesController {
             self::$_instance = new CoursesController();
         }
         return self::$_instance;
+    }
+
+    public static function getCourses() : array {
+        // Check if the user is logged in
+        if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
+
+        // Get courses from the database
+        $courses = CoursesAccess::getAll();
+        if (!$courses) {
+            // No courses found
+            return [];
+        }
+        // Return courses
+        return $courses;
     }
 
     public function render() {
