@@ -2,7 +2,7 @@
 
 namespace App\models;
 
-class Question {
+class Questions {
     # Variables
     private int $id;
     private int $quiz_id;

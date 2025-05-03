@@ -3,14 +3,14 @@
 namespace App\models;
 use PDO;
 
-class AnswerAccess extends Database {
+class AnswersAccess extends Database {
     # Récupérer toutes les réponses
     public static function getAll(): array {
         $query = self::query('SELECT * FROM answers');
         $answers = [];
 
         foreach ($query as $row) {
-            $answers[$row['id']] = new Answer(
+            $answers[$row['id']] = new Answers(
                 (int)$row['id'],
                 (int)$row['question_id'],
                 $row['content'],
@@ -23,11 +23,15 @@ class AnswerAccess extends Database {
 
     # Récupérer les réponses pour une question spécifique
     public static function getByQuestionId(int $questionId): array {
-        $rows = self::prepare('SELECT * FROM answers WHERE question_id = ?', [$questionId]);
-        $answers = [];
+        $rows = self::fetchAll("SELECT * FROM answers WHERE question_id = ?", [$questionId]);
 
+        if (empty($rows)) {
+            return [];
+        }
+
+        $answers = [];
         foreach ($rows as $row) {
-            $answers[$row['id']] = new Answer(
+            $answers[] = new Answers(
                 (int)$row['id'],
                 (int)$row['question_id'],
                 $row['content'],
