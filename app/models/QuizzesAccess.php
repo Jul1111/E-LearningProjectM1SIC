@@ -5,19 +5,21 @@ use PDO;
 
 class QuizAccess extends Database {
     # Récupérer tous les quiz
-    public static function getAll(): array {
-        $query = self::query('SELECT * FROM quizzes');
+    public static function getAll() {
+        
+        $rows = Database::fetchAll("SELECT * FROM quizzes");
+        if (empty($rows)) {
+            return [];
+        }
         $quizzes = [];
-
-        foreach ($query as $row) {
-            $quizzes[$row['id']] = new Quiz(
+        foreach ($rows as $row) {
+            $quizzes[] = new Quizzes(
                 (int)$row['id'],
                 (int)$row['chapter_id'],
                 $row['title'],
                 (bool)$row['is_final']
             );
         }
-
         return $quizzes;
     }
 
