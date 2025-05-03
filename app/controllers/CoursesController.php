@@ -31,7 +31,7 @@ class CoursesController {
     public function render() {
         // Check if the user is logged in
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
-
+        
         $rootFolder = 'dashboard'; // Only var to change
         $pageName = 'courses'; // Only var to change
 
