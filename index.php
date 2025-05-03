@@ -39,6 +39,7 @@ match($action) {
     'quiz' => QuizController::getInstance()->render(),
     'chapters' => ChapterController::getInstance()->render(),
     'payment' => PaymentController::getInstance()->render(),
+    'confirmation' => ConfirmationController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 
