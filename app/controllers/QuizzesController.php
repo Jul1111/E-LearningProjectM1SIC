@@ -1,16 +1,47 @@
 <?php
 namespace App\Controllers;
+use App\models\QuizzesAccess;
 
-class QuizController {
+class QuizzesController {
     private static $_instance = NULL;
 
     private function __construct() {}
 
     public static function getInstance() {
         if (is_null(self::$_instance)) {
-            self::$_instance = new QuizController();
+            self::$_instance = new QuizzesController();
         }
         return self::$_instance;
+    }
+
+    public static function getQuizzes() {
+        // Check if the user is logged in
+        if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
+
+        // Get quizzes from the database
+        $quizzes = QuizzesAccess::getAll();
+        if (!$quizzes) {
+            // No quizzes found
+            return [];
+        }
+
+        // Return quizzes
+        return $quizzes;
+    }
+
+    public static function getCourseTitle(int $chapterId): string {
+        // Check if the user is logged in
+        if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
+
+        // Get course title from the database
+        $courseTitle = QuizzesAccess::getCoursesTitleByChapterId($chapterId);
+        if (!$courseTitle) {
+            // No course title found
+            return '';
+        }
+
+        // Return course title
+        return $courseTitle;
     }
 
     public function render() {

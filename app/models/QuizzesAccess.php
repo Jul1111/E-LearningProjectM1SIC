@@ -3,7 +3,7 @@
 namespace App\models;
 use PDO;
 
-class QuizAccess extends Database {
+class QuizzesAccess extends Database {
     # Récupérer tous les quiz
     public static function getAll() {
         
@@ -21,6 +21,17 @@ class QuizAccess extends Database {
             );
         }
         return $quizzes;
+    }
+
+    # Get courses title by using chapter ID
+    public static function getCoursesTitleByChapterId(int $chapterId): string {
+        $row = self::fetchOne('SELECT courses.title FROM courses JOIN chapters ON courses.id = chapters.course_id WHERE chapters.id = ?', [$chapterId]);
+
+        if ($row) {
+            return $row['title'];
+        }
+
+        return '';
     }
 
     # Récupérer les quiz d’un chapitre
