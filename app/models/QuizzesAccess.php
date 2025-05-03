@@ -3,22 +3,35 @@
 namespace App\models;
 use PDO;
 
-class QuizAccess extends Database {
+class QuizzesAccess extends Database {
     # Récupérer tous les quiz
-    public static function getAll(): array {
-        $query = self::query('SELECT * FROM quizzes');
+    public static function getAll() {
+        
+        $rows = Database::fetchAll("SELECT * FROM quizzes");
+        if (empty($rows)) {
+            return [];
+        }
         $quizzes = [];
-
-        foreach ($query as $row) {
-            $quizzes[$row['id']] = new Quiz(
+        foreach ($rows as $row) {
+            $quizzes[] = new Quizzes(
                 (int)$row['id'],
                 (int)$row['chapter_id'],
                 $row['title'],
                 (bool)$row['is_final']
             );
         }
-
         return $quizzes;
+    }
+
+    # Get courses title by using chapter ID
+    public static function getCoursesTitleByChapterId(int $chapterId): string {
+        $row = self::fetchOne('SELECT courses.title FROM courses JOIN chapters ON courses.id = chapters.course_id WHERE chapters.id = ?', [$chapterId]);
+
+        if ($row) {
+            return $row['title'];
+        }
+
+        return '';
     }
 
     # Récupérer les quiz d’un chapitre
