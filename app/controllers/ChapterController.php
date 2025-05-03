@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-use App\models\ChapterAccess;
+use App\models\ChaptersAccess;
 
 class ChapterController {
     private static $_instance = NULL;
@@ -19,7 +19,7 @@ class ChapterController {
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
 
         // Get chapters from the database
-        $chapters = ChapterAccess::getByCourseID($courseId);
+        $chapters = ChaptersAccess::getByCourseID($courseId);
         if (!$chapters) {
             // No chapters found
             return [];
