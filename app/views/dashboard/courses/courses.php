@@ -4,11 +4,12 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+<link rel="stylesheet" href="/resources/css/style.css">
 <body>
   <div class="dashboard">
     <div class="main">
+    <h3>Liste des cours</h3>
       <div class="courses">
-        <h3>Liste des cours</h3>
         <?php
           $courses = CoursesController::getCourses();
 
@@ -21,9 +22,8 @@
               echo '<h4>' . htmlspecialchars($course->getTitle()) . '</h4>';
               echo '<p>' . htmlspecialchars($course->getDescription()) . '</p>';
               // bouton tout à droite "voir le cours"
-              echo '<div class="course-button">';
-              echo '<a href="/chapters?course=' . $course->getId() . '">Voir le cours</a>';
-              echo '</div>';
+              echo '<div class="course-button" style="margin-top: 10px;">';
+              echo '<a href="/chapters?course=' . $course->getId() . '" class="btn-course">Voir le cours</a>';
               echo '</div>';
             }
           }

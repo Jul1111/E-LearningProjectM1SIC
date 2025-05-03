@@ -280,4 +280,19 @@ nav a {
   .btn-orange:hover {
     background-color: #e08600;
   }
+  .btn-course {
+    background-color: #ff9900;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
   
+  .btn-course:hover {
+    background-color: #e08600;
+    color: white
+}

@@ -14,12 +14,11 @@ class ConfirmationController {
     }
 
     public function render() {
-        $rootFolder = 'main'; // Ne change pas
         $pageName = 'confirmation'; // Nom de ta page
 
         // Setup views paths
         $headerPath = __DIR__ . '/../views/header.php';
-        $mainView   = __DIR__ . '/../views/' . $rootFolder . '/' . $pageName . '/' . $pageName . '.php';
+        $mainView   = __DIR__ . '/../views/' . $pageName . '/' . $pageName . '.php';
         $footerPath = __DIR__ . '/../views/footer.php';
 
         // Include views
