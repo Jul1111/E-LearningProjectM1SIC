@@ -25,7 +25,8 @@ $totalTTC = $priceHT * (1 + $tva);
     <h1>Paiement</h1>
     <p class="plan">Offre sélectionnée : <?= htmlspecialchars($planLabel . ' ' . $type) ?></p>
 
-    <form method="post" action="/confirmation">
+    <form method="get" action="/confirmation">
+    <input type="hidden" name="plan" value="<?= htmlspecialchars($selectedPlan) ?>">
       <div class="form-group">
         <label for="name">Nom complet</label>
         <input type="text" id="name" name="name" required>
