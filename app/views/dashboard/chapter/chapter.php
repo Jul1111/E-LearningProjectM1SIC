@@ -21,8 +21,7 @@
           2 => '/resources/pdf/Cours_Complet_Illustré_BUDGETS.pdf',
           3 => '/resources/pdf/Cours_Complet_Illustré_ECARTS.pdf',
           4 => '/resources/pdf/Cours_Complet_Illustré_INVESTISSEMENT_1.pdf',
-          5 => '/resources/pdf/Cours_Complet_Illustré_INVESTISSEMENT_2.pdf',
-          6 => '/resources/pdf/Cours_Complet_Illustré_MPM.pdf',
+          5 => '/resources/pdf/Cours_Complet_Illustré_MPM.pdf',
         ];
 
           if (count($chapters) === 0) {
