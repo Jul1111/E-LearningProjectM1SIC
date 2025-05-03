@@ -3,7 +3,7 @@
 namespace App\models;
 use PDO;
 
-class ChapterAccess extends Database {
+class ChaptersAccess extends Database {
     # Récupérer tous les chapitres
     public static function getAll(): array {
         $query = self::query('SELECT * FROM chapters');
@@ -12,9 +12,9 @@ class ChapterAccess extends Database {
         foreach ($query as $row) {
             $chapters[$row['id']] = new Chapters(
                 (int)$row['id'],
-                (int)$row['course_id'],
                 $row['title'],
-                $row['content']
+                $row['content'],
+                (int)$row['course_id']
             );
         }
 
@@ -23,19 +23,20 @@ class ChapterAccess extends Database {
 
     # Récupérer les chapitres par cours
     public static function getByCourseId(int $courseId): array {
-        $rows = self::prepare('SELECT * FROM chapters WHERE course_id = ?', [$courseId]);
-        $chapters = [];
+        $row = self::fetchOne('SELECT * FROM chapters WHERE course_id = ?', [$courseId]);
 
-        foreach ($rows as $row) {
-            $chapters[$row['id']] = new Chapters(
-                (int)$row['id'],
-                (int)$row['course_id'],
-                $row['title'],
-                $row['content']
-            );
+        if ($row) {
+            return [
+                new Chapters(
+                    (int)$row['id'],
+                    $row['title'],
+                    $row['content'],
+                    (int)$row['course_id']
+                )
+            ];
         }
 
-        return $chapters;
+        return [];
     }
 
     # Récupérer un chapitre par ID

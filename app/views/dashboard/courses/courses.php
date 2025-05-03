@@ -22,7 +22,7 @@
               echo '<p>' . htmlspecialchars($course->getDescription()) . '</p>';
               // bouton tout à droite "voir le cours"
               echo '<div class="course-button">';
-              echo '<a href="/courses/' . $course->getId() . '">Voir le cours</a>';
+              echo '<a href="/chapters?course=' . $course->getId() . '">Voir le cours</a>';
               echo '</div>';
               echo '</div>';
             }

@@ -37,6 +37,7 @@ match($action) {
     'profil' => ProfilController::getInstance()->render(),
     'courses' => CoursesController::getInstance()->render(),
     'quiz' => QuizController::getInstance()->render(),
+    'chapters' => ChapterController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 
