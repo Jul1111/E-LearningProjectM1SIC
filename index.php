@@ -38,6 +38,7 @@ match($action) {
     'courses' => CoursesController::getInstance()->render(),
     'quiz' => QuizController::getInstance()->render(),
     'chapters' => ChapterController::getInstance()->render(),
+    'payment' => PaymentController::getInstance()->render(),
     default => HomeController::getInstance()->render(),
 };
 
