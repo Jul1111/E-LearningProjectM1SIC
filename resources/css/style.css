@@ -167,3 +167,83 @@ nav a {
     border: 2px solid #ff9900;
     color: #ff9900;
 }
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 80px auto; /* Ajoute de l'espace au-dessus et en dessous */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }  
+  
+  .plan {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff9900;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .btn-payer {
+    background-color: #ff9900;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .btn-payer:hover {
+    background-color: #e08600;
+  }
+  .payment-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  .container-left,
+  .container-right {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .container-left {
+    flex: 2;
+  }
+  
+  .container-right {
+    flex: 1;
+    height: fit-content;
+  }
+  
+  .container-right h2 {
+    color: #ff9900;
+    margin-bottom: 20px;
+  }
