@@ -34,6 +34,24 @@ class QuizzesAccess extends Database {
         return '';
     }
 
+    # Get course by using chapter ID
+    public static function getCourseByChapterId(int $chapterId): array {
+        $row = self::fetchOne('SELECT * FROM courses JOIN chapters ON courses.id = chapters.course_id WHERE chapters.id = ?', [$chapterId]);
+
+        if ($row) {
+            return [
+                new Courses(
+                    (int)$row['id'],
+                    $row['title'],
+                    $row['description'],
+                    $row['created_at']
+                )
+            ];
+        }
+
+        return [];
+    }
+
     # Récupérer les quiz d’un chapitre
     public static function getByChapterId(int $chapterId): array {
         $rows = self::prepare('SELECT * FROM quizzes WHERE chapter_id = ?', [$chapterId]);

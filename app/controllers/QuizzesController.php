@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\models\QuizzesAccess;
+use App\models\QuestionsAccess;
+use App\models\AnswersAccess;
 
 class QuizzesController {
     private static $_instance = NULL;
@@ -29,19 +31,40 @@ class QuizzesController {
         return $quizzes;
     }
 
-    public static function getCourseTitle(int $chapterId): string {
+    public static function getCourse(int $chapterId): array {
         // Check if the user is logged in
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
 
         // Get course title from the database
-        $courseTitle = QuizzesAccess::getCoursesTitleByChapterId($chapterId);
-        if (!$courseTitle) {
+        $course = QuizzesAccess::getCourseByChapterId($chapterId);
+        if (!$course) {
             // No course title found
-            return '';
+            return [];
         }
 
         // Return course title
-        return $courseTitle;
+        return $course;
+    }
+
+    public static function getQuizQuestions(int $quizId): array {
+        // Vérifie que l'utilisateur est connecté
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /login");
+            exit();
+        }
+    
+        // Récupère les questions du quiz
+        return QuestionsAccess::getByQuizId($quizId);
+    }
+
+    public static function getAnswersForQuestion(int $questionId): array {
+        // Vérifie que l'utilisateur est connecté
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /login");
+            exit();
+        }
+    
+        return AnswersAccess::getByQuestionId($questionId);
     }
 
     public function render() {

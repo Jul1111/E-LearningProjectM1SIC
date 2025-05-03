@@ -3,14 +3,14 @@
 namespace App\models;
 use PDO;
 
-class QuestionAccess extends Database {
+class QuestionsAccess extends Database {
     # Récupérer toutes les questions
     public static function getAll(): array {
         $query = self::query('SELECT * FROM questions');
         $questions = [];
 
         foreach ($query as $row) {
-            $questions[$row['id']] = new Question(
+            $questions[$row['id']] = new Questions(
                 (int)$row['id'],
                 (int)$row['quiz_id'],
                 $row['content']
@@ -22,11 +22,15 @@ class QuestionAccess extends Database {
 
     # Récupérer les questions par ID de quiz
     public static function getByQuizId(int $quizId): array {
-        $rows = self::prepare('SELECT * FROM questions WHERE quiz_id = ?', [$quizId]);
-        $questions = [];
+        $rows = self::fetchAll("SELECT * FROM questions WHERE quiz_id = ?", [$quizId]);
 
+        if (empty($rows)) {
+            return [];
+        }
+
+        $questions = [];
         foreach ($rows as $row) {
-            $questions[$row['id']] = new Question(
+            $questions[] = new Questions(
                 (int)$row['id'],
                 (int)$row['quiz_id'],
                 $row['content']
@@ -37,11 +41,11 @@ class QuestionAccess extends Database {
     }
 
     # Récupérer une seule question par son ID
-    public static function getById(int $id): ?Question {
+    public static function getById(int $id): ?Questions {
         $row = self::prepareFetch('SELECT * FROM questions WHERE id = ?', [$id]);
 
         if ($row) {
-            return new Question(
+            return new Questions(
                 (int)$row['id'],
                 (int)$row['quiz_id'],
                 $row['content']
