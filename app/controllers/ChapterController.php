@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use App\models\ChapterAccess;
 
 class ChapterController {
     private static $_instance = NULL;
@@ -11,6 +12,21 @@ class ChapterController {
             self::$_instance = new ChapterController();
         }
         return self::$_instance;
+    }
+
+    public static function getByCourseID(int $courseId): array {
+        // Check if the user is logged in
+        if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
+
+        // Get chapters from the database
+        $chapters = ChapterAccess::getByCourseID($courseId);
+        if (!$chapters) {
+            // No chapters found
+            return [];
+        }
+
+        // Return chapters
+        return $chapters;
     }
 
     public function render() {

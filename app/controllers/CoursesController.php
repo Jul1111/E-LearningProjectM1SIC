@@ -24,6 +24,7 @@ class CoursesController {
             // No courses found
             return [];
         }
+        
         // Return courses
         return $courses;
     }
