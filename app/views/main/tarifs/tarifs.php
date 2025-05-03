@@ -31,7 +31,10 @@
         <li style="margin-bottom: 0;">✖️ Communauté privée</li>
     </ul>
 
-      <a href="#" style="margin-top: 20px; display: inline-block; background-color: #ff9900; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">Choisir</a>
+    <a id="chooseBasic" href="/payment?plan=basic-mensuel" style="margin-top: 20px; display: inline-block; background-color: #ff9900; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+  Choisir
+</a>
+
     </div>
 
     <!-- Offre Premium -->
@@ -48,7 +51,10 @@
         <li style="margin-bottom: 0;">✔️ Suivi personnalisé</li>
     </ul>
 
-      <a href="#" style="margin-top: 20px; display: inline-block; background-color: #ff9900; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">Choisir</a>
+    <a id="choosePremium" href="/payment?plan=premium-mensuel" style="margin-top: 20px; display: inline-block; background-color: #ff9900; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+  Choisir
+</a>
+
     </div>
   </div>
 </section>
@@ -60,10 +66,14 @@
     const premiumPrice = document.getElementById("premiumPrice");
     const btnMonthly = document.getElementById("monthlyBtn");
     const btnYearly = document.getElementById("yearlyBtn");
+    const chooseBasic = document.getElementById("chooseBasic");
+    const choosePremium = document.getElementById("choosePremium");
 
     if (mode === "monthly") {
       basicPrice.textContent = "4,90€/mois";
       premiumPrice.textContent = "9,90€/mois";
+      chooseBasic.href = "/payment?plan=basic-mensuel";
+      choosePremium.href = "/payment?plan=premium-mensuel";
       btnMonthly.style.backgroundColor = "#ff9900";
       btnMonthly.style.color = "white";
       btnYearly.style.backgroundColor = "white";
@@ -71,12 +81,19 @@
     } else {
       basicPrice.textContent = "49€/an";
       premiumPrice.textContent = "99€/an";
+      chooseBasic.href = "/payment?plan=basic-annuel";
+      choosePremium.href = "/payment?plan=premium-annuel";
       btnMonthly.style.backgroundColor = "white";
       btnMonthly.style.color = "#ff9900";
       btnYearly.style.backgroundColor = "#ff9900";
       btnYearly.style.color = "white";
     }
   }
+
+  // Initialiser par défaut
+  togglePricing('monthly');
+</script>
+
 </script>
 
 </body>
