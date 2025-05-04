@@ -307,3 +307,93 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
   
+  .stats-wrapper {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .stats-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .stats-subtitle {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 30px;
+  }
+  
+  .stat-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .stat-box {
+    flex: 1;
+    min-width: 220px;
+    padding: 25px;
+    border-radius: 12px;
+    color: #111;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .stat-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+  .stat-box small {
+    font-size: 13px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .stat-box strong {
+    display: block;
+    font-size: 36px;
+    margin: 10px 0;
+    color: #ff9900;
+  }
+  .stat-box span {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Couleurs douces Learn2Master */
+  .learn-orange {
+    background: linear-gradient(135deg, #ffe0b2, #fff3e0);
+  }
+  .learn-blue {
+    background: linear-gradient(135deg, #dbefff, #f0f9ff);
+  }
+  .learn-pink {
+    background: linear-gradient(135deg, #fde3e3, #fff1f3);
+  }
+  
+  .center-btn {
+    margin-top: 20px;
+  }
+  
+  .keep-going {
+    background-color: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .keep-going:hover {
+    background-color: #ff9900;
+  }
+  

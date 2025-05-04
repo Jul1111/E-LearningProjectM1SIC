@@ -40,6 +40,7 @@ match($action) {
     'chapters' => ChapterController::getInstance()->render(),
     'payment' => PaymentController::getInstance()->render(),
     'confirmation' => ConfirmationController::getInstance()->render(),
+    'reset_data' => ProfilController::getInstance()->reset(),
     default => HomeController::getInstance()->render(),
 };
 
