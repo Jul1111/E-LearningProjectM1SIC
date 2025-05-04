@@ -11,13 +11,12 @@ use App\controllers\QuizzesController;
 <body>
   <div class="dashboard">
     <div class="main">
-      <div class="courses">
-        <h3>Liste des quiz</h3>
-
+      <div class="courses <?php echo isset($_GET['course']) ? 'quiz-mode' : ''; ?>">
         <?php
         $quizzes = QuizzesController::getQuizzes();
 
         if (count($quizzes) === 0) {
+          echo '<h3>Liste des quiz</h3>';
           echo '<div class="course-item">Aucun quiz pour le moment.</div>';
         } else {
           if (isset($_GET['course'])) {
@@ -30,7 +29,8 @@ use App\controllers\QuizzesController;
               echo '<div id="quiz-container">';
               foreach ($questions as $qIndex => $question) {
                 echo '<div class="question-block" id="question-' . $qIndex . '" style="' . ($qIndex === 0 ? '' : 'display:none;') . '">';
-                echo '<p><b>' . htmlspecialchars($question->getContent()) . '</b></p>';
+                echo '<p><strong>Question ' . ($qIndex + 1) . ' :</strong><br>' . htmlspecialchars($question->getContent()) . '</p>';
+
 
                 $answers = QuizzesController::getAnswersForQuestion($question->getId());
                 shuffle($answers);
@@ -58,7 +58,7 @@ use App\controllers\QuizzesController;
             }
           } else {
             foreach ($quizzes as $quiz) {
-              $course = QuizzesController::getCourse($quiz->getChapterId())[0];
+              $course = QuizzesController::getCourseByChapterId($quiz->getChapterId())[0];
 
               echo '<div class="course-item">';
               echo '<p> Quiz sur le cours : <b>' . htmlspecialchars($course->getTitle()) . '</b></p>';

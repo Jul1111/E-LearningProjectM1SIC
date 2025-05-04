@@ -31,7 +31,7 @@ class QuizzesController {
         return $quizzes;
     }
 
-    public static function getCourse(int $chapterId): array {
+    public static function getCourseByChapterId(int $chapterId): array {
         // Check if the user is logged in
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
 
@@ -52,9 +52,11 @@ class QuizzesController {
             header("Location: /login");
             exit();
         }
-    
-        // Récupère les questions du quiz
-        return QuestionsAccess::getByQuizId($quizId);
+
+        $questions = QuestionsAccess::getByQuizId($quizId);
+        shuffle($questions);
+        
+        return $questions;
     }
 
     public static function getAnswersForQuestion(int $questionId): array {
