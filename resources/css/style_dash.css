@@ -240,16 +240,13 @@ body {
   }
 
   .question-block {
-    margin-bottom: 40px;
-  }
-
-  .question-block {
-    margin-bottom: 40px;
+    margin-bottom: 0; /* retire le trop grand espace entre les blocs */
+    padding-bottom: 0px; /* espace raisonnable */
   }
 
   .answer {
     border: 2px solid orange;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 15px;
     margin: 10px 0;
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -258,21 +255,103 @@ body {
     cursor: pointer;
   }
   
-  .answer.correct {
-    background-color: #d4edda;
-    border-color: green;
+  .answer:hover {
+    /* lighter shade of orange */
+    background-color: #ffe6cc;
   }
-  
-  .answer.incorrect {
-    background-color: #f8d7da;
-    border-color: red;
-  }
-  
-  input[type="radio"] {
-    accent-color: black; /* <-- modifié ici */
-    margin-right: 10px;
-    transform: scale(1.2);
-  }
+/* Cache la radio native */
+.answer.numbered-answer input[type="radio"] {
+  display: none;
+}
+
+/* Conteneur de réponse */
+.answer.numbered-answer {
+  border: 2px solid #ff9900;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: white;
+}
+
+/* Badge carré (au lieu de rond) */
+.answer .number-badge {
+  width: 36px;
+  height: 36px;
+  background-color: #fff7eb;
+  border: 2px solid #ff9900;
+  border-radius: 8px; /* carré avec angles légèrement arrondis */
+  color: #ff9900;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+/* Texte de la réponse */
+.answer .answer-text {
+  color: #333;
+  font-size: 15px;
+  flex: 1;
+}
+
+/* Hover */
+.answer.numbered-answer:hover {
+  background-color: #fff1e0;
+}
+
+/* ÉTAT SÉLECTIONNÉ : change la couleur du badge */
+.answer.numbered-answer.selected .number-badge {
+  background-color: #ff9900;
+  color: white;
+  border-color: #ff9900;
+}
+
+/* Réponses correctes/incorrectes à la validation */
+.answer.correct {
+  background-color: #d4edda;
+  border-color: green;
+}
+
+.answer.incorrect {
+  background-color: #f8d7da;
+  border-color: red;
+}
+
+/* BADGE vert si réponse correcte sélectionnée */
+.answer.correct.selected .number-badge {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+
+/* BADGE rouge si réponse incorrecte sélectionnée */
+.answer.incorrect.selected .number-badge {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+/* Optionnel : badge des réponses correctes non sélectionnées */
+.answer.correct:not(.selected) .number-badge {
+  background-color: #d4edda;
+  border-color: green;
+  color: green;
+}
+
+/* Optionnel : badge des réponses incorrectes non sélectionnées */
+.answer.incorrect:not(.selected) .number-badge {
+  background-color: #f8d7da;
+  border-color: red;
+  color: red;
+}
+
 
   .question-block button {
     display: block;
@@ -286,6 +365,8 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* réduit l'écart au-dessus du bouton */
+    margin-bottom: 0; /* supprime tout espace inutile en dessous */
   }
   
   .question-block button:hover {
@@ -510,84 +591,4 @@ body {
 
 .welcome-avatar img {
   height: 80px;
-}
-
-.question-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: all 0.3s ease;
-}
-
-.question-header {
-  margin-bottom: 20px;
-}
-
-.question-number {
-  font-weight: bold;
-  font-size: 16px;
-  color: #ff9900;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.question-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  margin: 0;
-}
-
-.modern-answer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 18px;
-  margin: 12px 0;
-  border: 2px solid #eee;
-  border-radius: 12px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  background-color: #fdfdfd;
-  font-size: 16px;
-}
-
-.modern-answer:hover {
-  background-color: #fff6eb;
-  border-color: #ff9900;
-}
-
-.modern-answer input[type="radio"] {
-  accent-color: #ff9900;
-  transform: scale(1.4);
-  margin: 0;
-}
-
-.next-question-btn {
-  display: block;
-  margin: 30px auto 0;
-  padding: 12px 30px;
-  background-color: #ff9900;
-  color: #fff;
-  font-weight: bold;
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.next-question-btn:hover {
-  background-color: #e68a00;
-}
-
-.next-question-btn:disabled {
-  background-color: #ddd;
-  color: #aaa;
-  cursor: not-allowed;
 }
