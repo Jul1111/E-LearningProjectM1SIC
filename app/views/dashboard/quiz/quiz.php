@@ -11,6 +11,11 @@ use App\controllers\QuizzesController;
 <body>
   <div class="dashboard">
     <div class="main">
+      <?php if(isset($_GET['course'])): ?>
+        <center><h3>Quiz sur le cours : <i><?= htmlspecialchars(QuizzesController::getCourseByChapterId($_GET['course'])[0]->getTitle()) ?></i></h3></center>
+      <?php else: ?>
+        <h3>Quiz</h3>
+      <?php endif; ?>
       <div class="courses <?php echo isset($_GET['course']) ? 'quiz-mode' : ''; ?>">
         <?php
         $quizzes = QuizzesController::getQuizzes();
