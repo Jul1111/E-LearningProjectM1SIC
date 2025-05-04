@@ -273,3 +273,30 @@ body {
     margin-right: 10px;
     transform: scale(1.2);
   }
+
+  .question-block button {
+    display: block;
+    margin: 30px auto 0 auto; /* 30px au-dessus, auto pour centrer horizontalement */
+    padding: 12px 24px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .question-block button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+  }
+  
+  .question-block button:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
