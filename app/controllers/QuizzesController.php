@@ -3,6 +3,7 @@ namespace App\Controllers;
 use App\models\QuizzesAccess;
 use App\models\QuestionsAccess;
 use App\models\AnswersAccess;
+use App\models\UserQuizResultsAccess;
 
 class QuizzesController {
     private static $_instance = NULL;
@@ -69,6 +70,16 @@ class QuizzesController {
         return AnswersAccess::getByQuestionId($questionId);
     }
 
+    public static function saveUserQuizResult(int $quizId, int $score): bool {
+        if (!isset($_SESSION['user_id'])) {
+            return false;
+        }
+    
+        $userId = $_SESSION['user_id'];
+        return UserQuizResultsAccess::insertResult($userId, $quizId, $score);
+    }
+    
+
     public function render() {
         // Check if the user is logged in
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
@@ -86,4 +97,17 @@ class QuizzesController {
         require_once $mainView;
         require_once $footerPath; 
     }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'save_result') {
+    session_start(); // Assure que la session est ouverte si appelée via AJAX
+
+    require_once __DIR__ . '/../models/UserQuizResultsAccess.php';
+
+    $quizId = intval($_POST['quiz_id'] ?? 0);
+    $score = intval($_POST['score'] ?? 0);
+
+    $success = QuizzesController::saveUserQuizResult($quizId, $score);
+    echo json_encode(['success' => $success]);
+    exit;
 }

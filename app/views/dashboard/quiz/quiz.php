@@ -11,6 +11,11 @@ use App\controllers\QuizzesController;
 <body>
   <div class="dashboard">
     <div class="main">
+      <?php if(isset($_GET['course'])): ?>
+        <center><h3>Quiz sur le cours : <i><?= htmlspecialchars(QuizzesController::getCourseByChapterId($_GET['course'])[0]->getTitle()) ?></i></h3></center>
+      <?php else: ?>
+        <h3>Liste des quiz</h3>
+      <?php endif; ?>
       <div class="courses <?php echo isset($_GET['course']) ? 'quiz-mode' : ''; ?>">
         <?php
         $quizzes = QuizzesController::getQuizzes();
@@ -134,10 +139,27 @@ use App\controllers\QuizzesController;
     function showFinalResult() {
       const resultContainer = document.getElementById('quiz-result');
       const resultText = document.getElementById('result-text');
-
       resultText.textContent = `Quiz terminé : ${correctCount}/${totalQuestions} réponse${correctCount > 1 ? 's' : ''} correcte${correctCount > 1 ? 's' : ''}`;
       resultContainer.style.display = 'block';
+
+      const quizId = new URLSearchParams(window.location.search).get('course');
+
+      fetch('/quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `action=save_result&quiz_id=${quizId}&score=${correctCount}`
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (!data.success) {
+          console.error('Erreur lors de la sauvegarde du score.');
+        }
+      })
+      .catch(error => {
+        console.error('Erreur AJAX :', error);
+      });
     }
+
   </script>
 </body>
 </html>

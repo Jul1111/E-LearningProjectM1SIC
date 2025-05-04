@@ -4,34 +4,30 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-<link rel="stylesheet" href="/resources/css/style.css">
 <body>
   <div class="dashboard">
     <div class="main">
-      <h3>Liste des chapitres</h3>
+      <h3>Le cours et ses chapitres</h3>
       <div class="courses">
         <?php
           $courseId = $_GET['course'] ?? -1;
           $chapters = ChapterController::getByCourseID($courseId);
 
          
-         // Mappage des PDFs (mettre à jour selon le bon ID du cours)
-         $pdfPaths = [
-          1 => '/resources/pdf/Cours_Complet_Illustré_BCG.pdf',
-          2 => '/resources/pdf/Cours_Complet_Illustré_BUDGETS.pdf',
-          3 => '/resources/pdf/Cours_Complet_Illustré_ECARTS.pdf',
-          4 => '/resources/pdf/Cours_Complet_Illustré_INVESTISSEMENT_Total.pdf',
-          5 => '/resources/pdf/Cours_Complet_Illustré_MPM.pdf',
-        ];
+          // Mappage des PDFs (mettre à jour selon le bon ID du cours)
+          $pdfPaths = [
+            1 => '/resources/pdf/Cours_Complet_Illustré_BCG.pdf',
+            2 => '/resources/pdf/Cours_Complet_Illustré_BUDGETS.pdf',
+            3 => '/resources/pdf/Cours_Complet_Illustré_ECARTS.pdf',
+            4 => '/resources/pdf/Cours_Complet_Illustré_INVESTISSEMENT_Total.pdf',
+            5 => '/resources/pdf/Cours_Complet_Illustré_MPM.pdf',
+          ];
 
           if (count($chapters) === 0) {
             echo '<div class="course-item">Aucun chapitre pour le moment.</div>';
           } else {
             foreach ($chapters as $chapter) {
               echo '<div class="course-item">';
-              echo '<h4>' . htmlspecialchars($chapter->getTitle()) . '</h4>';
-              echo '<p>' . htmlspecialchars($chapter->getDescription()) . '</p>';
-
               if (isset($pdfPaths[$courseId])) {
                 $pdfPath = $pdfPaths[$courseId];
                 echo '<div style="margin-top: 15px; max-height: 100vh; overflow: auto;">';
@@ -42,6 +38,7 @@
                 echo '<p style="color: #888;">Aucun document PDF disponible pour ce cours.</p>';
               }
 
+              echo '</div>';
               echo '</div>';
             }
           }
