@@ -58,7 +58,7 @@ use App\controllers\QuizzesController;
             }
           } else {
             foreach ($quizzes as $quiz) {
-              $course = QuizzesController::getCourse($quiz->getChapterId())[0];
+              $course = QuizzesController::getCourseByChapterId($quiz->getChapterId())[0];
 
               echo '<div class="course-item">';
               echo '<p> Quiz sur le cours : <b>' . htmlspecialchars($course->getTitle()) . '</b></p>';

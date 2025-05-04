@@ -36,13 +36,20 @@ class QuizzesAccess extends Database {
 
     # Get course by using chapter ID
     public static function getCourseByChapterId(int $chapterId): array {
-        $row = self::fetchOne('SELECT * FROM courses JOIN chapters ON courses.id = chapters.course_id WHERE chapters.id = ?', [$chapterId]);
+        $row = self::fetchOne(
+            'SELECT courses.id AS course_id, courses.title AS course_title, courses.description, courses.created_at
+             FROM courses
+             JOIN chapters ON courses.id = chapters.course_id
+             WHERE chapters.id = ?',
+            [$chapterId]
+        );
+        
 
         if ($row) {
             return [
                 new Courses(
-                    (int)$row['id'],
-                    $row['title'],
+                    (int)$row['course_id'],
+                    $row['course_title'],
                     $row['description'],
                     $row['created_at']
                 )
