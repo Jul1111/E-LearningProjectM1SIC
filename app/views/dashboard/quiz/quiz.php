@@ -11,7 +11,7 @@ use App\controllers\QuizzesController;
 <body>
   <div class="dashboard">
     <div class="main">
-      <div class="courses">
+      <div class="courses <?php echo isset($_GET['course']) ? 'quiz-mode' : ''; ?>">
         <?php
         $quizzes = QuizzesController::getQuizzes();
 
