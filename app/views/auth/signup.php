@@ -81,7 +81,7 @@
         <div class="logo-learn2master">📘 Learn2Master</div>
         <h2 class="fw-bold mb-4">Créer un compte</h2>
 
-        <form method="post" action="/signUp" onsubmit="return validatePasswords()">
+        <form method="post" action="/signup" onsubmit="return validatePasswords()">
           <div class="form-outline mb-4">
             <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" class="form-control" required />
           </div>
