@@ -15,4 +15,9 @@ class UserQuizResultsAccess extends Database {
 
         return $table;
     }
+
+    public static function insertResult(int $userId, int $quizId, int $score): bool {
+        $sql = "INSERT INTO user_quiz_results (user_id, quiz_id, score, completed_at) VALUES (?, ?, ?, NOW())";
+        return self::execute($sql, [$userId, $quizId, $score]);
+    }
 }

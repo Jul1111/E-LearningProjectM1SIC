@@ -17,6 +17,7 @@
         <p><strong>Filière :</strong> Management & Stratégie</p>
         <p><strong>Date d'inscription :</strong> <?= date('d/m/Y', strtotime($_SESSION['created_at'])); ?></p>
         <button class="edit-button">Modifier le profil</button>
+        <button class="edit-button">Réinitialiser ses données</button>
       </div>
     </div>
 
