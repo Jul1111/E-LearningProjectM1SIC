@@ -396,4 +396,91 @@ body {
   .keep-going:hover {
     background-color: #ff9900;
   }
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .course-card {
+    background: #fff;
+    display: flex;
+    align-items: center; /* bouton centré verticalement */
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
   
+  .course-card:hover {
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  
+  .course-icon-wrapper {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px; /* ↓ légèrement réduit */
+    height: 56px;
+    margin-right: -80px; /* ← ajuste ici l’écart avec le texte */
+  }
+  
+  .course-icon {
+    font-size: 30px;
+    margin: 0; /* supprime le décalage */
+  }
+  
+.course-info {
+  flex: 1;
+  max-width: 80%; /* empêche le texte de déborder à droite */
+}
+  
+.course-info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #111;
+}
+
+.course-info .author {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.course-info .description {
+  font-size: 15px;
+  margin-top: 8px;
+  color: #444;
+}
+
+.course-info .meta {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+  
+.course-action {
+  flex-shrink: 0;
+}
+
+.btn-view-course {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.btn-view-course:hover {
+  background-color: #e68a00;
+}

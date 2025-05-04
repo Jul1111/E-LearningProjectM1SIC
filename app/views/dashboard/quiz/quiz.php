@@ -7,21 +7,20 @@ use App\controllers\QuizzesController;
 <head>
   <meta charset="UTF-8">
 </head>
-
 <body>
   <div class="dashboard">
     <div class="main">
       <?php if(isset($_GET['course'])): ?>
         <center><h3>Quiz sur le cours : <i><?= htmlspecialchars(QuizzesController::getCourseByChapterId($_GET['course'])[0]->getTitle()) ?></i></h3></center>
       <?php else: ?>
-        <h3>Liste des quiz</h3>
+        <h3 style="margin-bottom: 30px;">Liste des quiz disponibles</h3>
       <?php endif; ?>
-      <div class="courses <?php echo isset($_GET['course']) ? 'quiz-mode' : ''; ?>">
+
+      <div class="<?php echo isset($_GET['course']) ? 'courses quiz-mode' : 'course-list'; ?>">
         <?php
         $quizzes = QuizzesController::getQuizzes();
 
         if (count($quizzes) === 0) {
-          echo '<h3>Liste des quiz</h3>';
           echo '<div class="course-item">Aucun quiz pour le moment.</div>';
         } else {
           if (isset($_GET['course'])) {
@@ -35,7 +34,6 @@ use App\controllers\QuizzesController;
               foreach ($questions as $qIndex => $question) {
                 echo '<div class="question-block" id="question-' . $qIndex . '" style="' . ($qIndex === 0 ? '' : 'display:none;') . '">';
                 echo '<p><strong>Question ' . ($qIndex + 1) . ' :</strong><br>' . htmlspecialchars($question->getContent()) . '</p>';
-
 
                 $answers = QuizzesController::getAnswersForQuestion($question->getId());
                 shuffle($answers);
@@ -54,9 +52,8 @@ use App\controllers\QuizzesController;
                 echo '<button onclick="handleValidation(' . $qIndex . ')" id="next-btn-' . $qIndex . '" disabled>Suivant</button>';
                 echo '</div>';
               }
-              echo '</div>'; // quiz-container
+              echo '</div>';
 
-              // Résultat final
               echo '<div id="quiz-result" style="display:none;">';
               echo '<h3 id="result-text"></h3>';
               echo '</div>';
@@ -64,11 +61,18 @@ use App\controllers\QuizzesController;
           } else {
             foreach ($quizzes as $quiz) {
               $course = QuizzesController::getCourseByChapterId($quiz->getChapterId())[0];
-
-              echo '<div class="course-item">';
-              echo '<p> Quiz sur le cours : <b>' . htmlspecialchars($course->getTitle()) . '</b></p>';
-              echo '<div class="course-button">';
-              echo '<a href="/quiz?course=' . $quiz->getId() . '">Accéder au quiz</a>';
+              echo '<div class="course-card">';
+              echo '<div class="course-icon-wrapper"><div class="course-icon">🧠</div></div>';
+              echo '<div class="course-info">';
+              echo '<h4>Quiz : ' . htmlspecialchars($course->getTitle()) . '</h4>';
+              echo '<p class="author">par L2Master</p>';
+              echo '<p class="description">Ce quiz couvre les points essentiels du cours "<strong>' . htmlspecialchars($course->getTitle()) . '</strong>" pour tester vos connaissances.</p>';
+              echo '<div class="meta">';
+              echo '<span class="created-at">📅 Créé le ' . date('d/m/Y', strtotime($course->getCreatedAt())) . '</span>';
+              echo '</div>';
+              echo '</div>';
+              echo '<div class="course-action">';
+              echo '<a href="/quiz?course=' . $quiz->getId() . '" class="btn-view-course">Accéder au quiz</a>';
               echo '</div>';
               echo '</div>';
             }
@@ -159,7 +163,6 @@ use App\controllers\QuizzesController;
         console.error('Erreur AJAX :', error);
       });
     }
-
   </script>
 </body>
 </html>

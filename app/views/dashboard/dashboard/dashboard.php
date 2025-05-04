@@ -22,7 +22,8 @@
         </div>
       </div>
       <div class="center-btn">
-        <button class="keep-going"><a href="/quiz" style="text-decoration: none; color:white;">Continuer les quiz</a></button>
+        <button class="keep-going"><a href="/courses" style="text-decoration: none; color:white;">Voir les cours</a></button>
+        <button class="keep-going"><a href="/quiz" style="text-decoration: none; color:white;">Aller sur les quiz</a></button>
       </div>
     </div>
   </div>
