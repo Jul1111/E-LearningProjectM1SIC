@@ -102,7 +102,7 @@ class QuizzesController {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'save_result') {
     session_start(); // Assure que la session est ouverte si appelée via AJAX
 
-    require_once __DIR__ . '/../models/UserQuizResultsAccess.php';
+    #require_once __DIR__ . '/../models/UserQuizResultsAccess.php';
 
     $quizId = intval($_POST['quiz_id'] ?? 0);
     $score = intval($_POST['score'] ?? 0);

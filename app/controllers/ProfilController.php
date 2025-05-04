@@ -1,6 +1,8 @@
 <?php
 namespace App\controllers;
 
+use App\models\UserQuizResultsAccess;
+
 class ProfilController {
     # Variable(s)
     private static $_instance = NULL;
@@ -16,9 +18,26 @@ class ProfilController {
         return self::$_instance;
     }
 
+    public function reset() {
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: /login");
+            exit();
+        }
+    
+        $userId = $_SESSION['user_id'];
+    
+        UserQuizResultsAccess::deleteResultsByUser($userId);
+    
+        // Optionnel : message flash ou redirection
+        header("Location: /profil?reset=success");
+        exit();
+    }    
+
     public function render() {
         // Check if the user is logged in
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
+
+        $resetSuccess = isset($_GET['reset']) && $_GET['reset'] === 'success';
 
         $rootFolder = 'dashboard'; // Only var to change
         $pageName = 'profil'; // Only var to change

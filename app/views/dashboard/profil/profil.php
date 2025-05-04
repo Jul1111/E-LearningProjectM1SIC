@@ -17,7 +17,13 @@
         <p><strong>Filière :</strong> Management & Stratégie</p>
         <p><strong>Date d'inscription :</strong> <?= date('d/m/Y', strtotime($_SESSION['created_at'])); ?></p>
         <button class="edit-button">Modifier le profil</button>
-        <button class="edit-button">Réinitialiser ses données</button>
+        <button class="edit-button"><a href="/reset_data" style="text-decoration: none; color:white;">Réinitialiser ses données</a></button>
+        <?php if (isset($resetSuccess) && $resetSuccess): ?>
+          <div style="color: green; margin-top: 20px;">
+            Vos données ont été réinitialisées avec succès.
+          </div>
+        <?php endif; ?>
+
       </div>
     </div>
 
