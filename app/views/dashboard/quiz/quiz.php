@@ -38,16 +38,17 @@ use App\controllers\QuizzesController;
                 $answers = QuizzesController::getAnswersForQuestion($question->getId());
                 shuffle($answers);
 
-                foreach ($answers as $answer) {
+                foreach ($answers as $aIndex => $answer) {
                   $answerId = $answer->getId();
                   $isCorrect = $answer->isCorrect() ? '1' : '0';
                   $content = htmlspecialchars($answer->getContent());
-
-                  echo "<label class='answer'>";
+                
+                  echo "<label class='answer numbered-answer'>";
                   echo "<input type='radio' name='question_$qIndex' value='$answerId' data-correct='$isCorrect'>";
-                  echo $content;
+                  echo "<span class='number-badge'>" . ($aIndex + 1) . "</span>";
+                  echo "<span class='answer-text'>$content</span>";
                   echo "</label>";
-                }
+                }                
 
                 echo '<button onclick="handleValidation(' . $qIndex . ')" id="next-btn-' . $qIndex . '" disabled>Suivant</button>';
                 echo '</div>';
@@ -91,6 +92,13 @@ use App\controllers\QuizzesController;
       input.addEventListener('change', function () {
         const index = this.name.split('_')[1];
         document.getElementById('next-btn-' + index).disabled = false;
+          // Supprime .selected de toutes les réponses de cette question
+          const allAnswers = this.closest('.question-block').querySelectorAll('.answer');
+          allAnswers.forEach(a => a.classList.remove('selected'));
+
+          // Ajoute .selected à la réponse cliquée
+          this.closest('.answer').classList.add('selected');
+
       });
     });
 
