@@ -396,4 +396,198 @@ body {
   .keep-going:hover {
     background-color: #ff9900;
   }
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .course-card {
+    background: #fff;
+    display: flex;
+    align-items: center; /* bouton centré verticalement */
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
   
+  .course-card:hover {
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+  
+  .course-icon-wrapper {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px; /* ↓ légèrement réduit */
+    height: 56px;
+    margin-right: -80px; /* ← ajuste ici l’écart avec le texte */
+  }
+  
+  .course-icon {
+    font-size: 30px;
+    margin: 0; /* supprime le décalage */
+  }
+  
+.course-info {
+  flex: 1;
+  max-width: 80%; /* empêche le texte de déborder à droite */
+}
+  
+.course-info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #111;
+}
+
+.course-info .author {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.course-info .description {
+  font-size: 15px;
+  margin-top: 8px;
+  color: #444;
+}
+
+.course-info .meta {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}
+  
+.course-action {
+  flex-shrink: 0;
+}
+
+.btn-view-course {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.btn-view-course:hover {
+  background-color: #e68a00;
+}
+
+.welcome-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 25px 40px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  margin-bottom: 40px;
+}
+
+.welcome-text h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #111;
+}
+
+.welcome-text p {
+  margin: 5px 0 0;
+  font-size: 15px;
+  color: #777;
+}
+
+.welcome-avatar img {
+  height: 80px;
+}
+
+.question-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.question-header {
+  margin-bottom: 20px;
+}
+
+.question-number {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ff9900;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.modern-answer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  margin: 12px 0;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: #fdfdfd;
+  font-size: 16px;
+}
+
+.modern-answer:hover {
+  background-color: #fff6eb;
+  border-color: #ff9900;
+}
+
+.modern-answer input[type="radio"] {
+  accent-color: #ff9900;
+  transform: scale(1.4);
+  margin: 0;
+}
+
+.next-question-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  background-color: #ff9900;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-question-btn:hover {
+  background-color: #e68a00;
+}
+
+.next-question-btn:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
