@@ -24,7 +24,7 @@
               echo '<div class="course-button" style="margin-top: 10px;">';
               echo '<a href="/chapters?course=' . $course->getId() . '" class="btn-course">Voir le cours</a>';
               echo '</div>';
-echo '</div>';
+              echo '</div>';
             }
           }
         ?>
