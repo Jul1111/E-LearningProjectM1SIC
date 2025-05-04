@@ -1,5 +1,12 @@
 <div class="dashboard">
   <div class="main">
+    <div class="welcome-box stats-wrapper">
+      <div class="welcome-text">
+        <h2>👋 Bonjour <?= $_SESSION['username'] ?> !</h2>
+        <p>Ravi de vous revoir sur Learn2Master.</p>
+      </div>
+    </div>
+
     <div class="stats-wrapper">
       <h2 class="stats-title">Vos statistiques générales</h2>
       <p class="stats-subtitle">Voici vos performances sur les quiz réalisés :</p>
@@ -22,8 +29,8 @@
         </div>
       </div>
       <div class="center-btn">
-        <button class="keep-going"><a href="/courses" style="text-decoration: none; color:white;">Voir les cours</a></button>
-        <button class="keep-going"><a href="/quiz" style="text-decoration: none; color:white;">Aller sur les quiz</a></button>
+        <a href="/courses" style="text-decoration: none; color:white;"><button class="keep-going">Voir les cours</button></a>
+        <a href="/quiz" style="text-decoration: none; color:white;"><button class="keep-going">Faire les quiz</button></a>
       </div>
     </div>
   </div>
