@@ -20,7 +20,7 @@
           1 => '/resources/pdf/Cours_Complet_Illustré_BCG.pdf',
           2 => '/resources/pdf/Cours_Complet_Illustré_BUDGETS.pdf',
           3 => '/resources/pdf/Cours_Complet_Illustré_ECARTS.pdf',
-          4 => '/resources/pdf/Cours_Complet_Illustré_INVESTISSEMENT_1.pdf',
+          4 => '/resources/pdf/Cours_Complet_Illustré_INVESTISSEMENT_Total.pdf',
           5 => '/resources/pdf/Cours_Complet_Illustré_MPM.pdf',
         ];
 
