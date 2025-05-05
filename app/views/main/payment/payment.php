@@ -55,6 +55,5 @@ $totalTTC = $priceHT * (1 + $tva);
     <p><strong>TVA (20%) :</strong> <?= number_format($priceHT * $tva, 2, ',', ' ') ?> €</p>
     <hr>
     <p><strong>Total TTC :</strong> <?= number_format($totalTTC, 2, ',', ' ') ?> €</p>
-
   </div>
 </div>

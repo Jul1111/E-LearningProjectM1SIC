@@ -509,7 +509,6 @@ body {
     justify-content: center;
     min-width: 50px; /* ↓ légèrement réduit */
     height: 56px;
-    margin-right: -80px; /* ← ajuste ici l’écart avec le texte */
   }
   
   .course-icon {

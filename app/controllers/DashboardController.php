@@ -18,6 +18,7 @@ class DashboardController {
     public function render() {
         // Check if the user is logged in
         if (!isset($_SESSION['user_id'])) { header("Location: /login"); exit(); }
+        if (isset($_SESSION['role']) && $_SESSION['role'] == 'Étudiant') { header("Location: /tarifs"); exit(); }
 
         $userId = $_SESSION['user_id'];
 
