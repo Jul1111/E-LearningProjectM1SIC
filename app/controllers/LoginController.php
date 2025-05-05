@@ -63,9 +63,16 @@ class LoginController {
         $_SESSION['created_at'] = $user->getCreatedAt();
         $_SESSION['is_logged_in'] = true;
         // Rediriger vers la page d'accueil ou tableau de bord
-        header("Location: /dashboard");
-        exit();
-     
+        
+        // Check role if "Etudiant" 
+        if ($_SESSION['role'] === 'Étudiant') {
+            header("Location: /");
+            exit();
+        } else {
+            header("Location: /dashboard");
+            exit();
+        }
+
         echo "Connexion réussie !";
     }
 }

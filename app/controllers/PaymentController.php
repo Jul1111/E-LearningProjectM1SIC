@@ -16,6 +16,12 @@ class PaymentController {
     }
 
     public function render() {
+        // Check if user is logged in
+        if (!isset($_SESSION['username'])) {
+            header('Location: /login');
+            exit();
+        }
+
         $rootFolder = 'main'; // Only var to change
         $pageName = 'payment'; // Only var to change
 

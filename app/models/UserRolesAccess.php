@@ -28,11 +28,16 @@ class UserRolesAccess extends Database {
         return null;
     }
 
-    public static function setUserRole(int $userId, int $roleId = 1)  {
-        $query = Database::execute('INSERT INTO user_roles (user_id, role_id) VALUES (:user_id, :role_id)', [
-            ':user_id' => $userId,
-            ':role_id' => $roleId
+        public static function setUserRole(int $userId, int $roleId) {
+        $query = self::execute('UPDATE user_roles SET role_id = :roleId WHERE user_id = :userId', [
+            ':roleId' => $roleId,
+            ':userId' => $userId
         ]);
-        return $query;
+
+        if ($query) {
+            return true;
+        }
+
+        return false;
     }
 }
