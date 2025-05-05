@@ -24,7 +24,7 @@ class ContactController {
 
         $users = UserAccess::getAll(); // Récupération des utilisateurs
         $userCount = count($users); // Nombre d'utilisateurs
-        echo $userCount; // Affichage du nombre d'utilisateurs
+        //echo $userCount; // Affichage du nombre d'utilisateurs
         
 
         $footerPath = __DIR__ . '/../views/footer.php'; // Chemin vers le pied de page
